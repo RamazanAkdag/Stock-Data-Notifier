@@ -1,0 +1,28 @@
+[
+    {
+        "date": "2024-08-14",
+        "stock_symbol": "A1CAP",
+        "company_name": "A1 CAPITAL YATIRIM",
+        "last_price": "25,90",
+        "high_price": "26,04",
+        "low_price": "25,76",
+        "volume": "13,311,997.68",
+        "daily_change": "0,70",
+        "weekly_change": "1,17",
+        "monthly_change": "-2,26",
+        "yearly_change": "-5,41"
+    },
+    {
+        "date": "2024-08-14",
+        "stock_symbol": "ALTNY",
+        "company_name": "ALTINAY SAVUNMA",
+        "last_price": "109,90",
+        "high_price": "112,90",
+        "low_price": "108,70",
+        "volume": "785,790,714.30",
+        "daily_change": "-1,96",
+        "weekly_change": "-7,10",
+        "monthly_change": "-10,94",
+        "yearly_change": "0,00"
+    }
+]

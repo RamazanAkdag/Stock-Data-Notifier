@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Stock Tracker</title>
+</head>
+<body>
+<h1>Stock Tracker</h1>
+
+<h2>Your Followed Stocks</h2>
+<ul>
+    <li th:each="stock : ${userStocks}">
+        <span th:text="${stock}"></span>
+
+        <form method="post" th:action="@{/stocks/unfollow/{stock}(stock=${stock})}" style="display:inline;">
+            <button type="submit">Unfollow</button>
+        </form>
+    </li>
+</ul>
+
+<h2>Available Stocks to Follow</h2>
+<ul>
+    <li th:each="stock : ${availableStocks}">
+        <span th:text="${stock}"></span>
+
+        <form method="post"  th:action="@{/stocks/follow/{stock}(stock=${stock})}" style="display:inline;">
+            <button type="submit">Follow</button>
+        </form>
+    </li>
+</ul>
+</body>
+</html>
