@@ -8,7 +8,8 @@ from datetime import datetime
 
 class Config:
     load_dotenv()
-    config = dotenv_values(".env")
+    config = dotenv_values(os.path.join(os.path.dirname(__file__), ".env"))
+
 
     DATABASE_NAME = config["DATABASE_NAME"]
     SQL_FILE = config['SQL_FILE']
@@ -158,7 +159,7 @@ def main():
         for data in stock_datas if data if data[0] in user_stocks
     ]
 
-    with open('../data/user_stock_datas.json', 'w') as json_file:
+    with open(os.path.join(os.path.dirname(__file__),'../data/user_stock_datas.json'), 'w') as json_file:
         json.dump(user_stock_datas, json_file, indent=4)
 
     print("User's stock data has been saved to 'user_stock_datas.json'.")
